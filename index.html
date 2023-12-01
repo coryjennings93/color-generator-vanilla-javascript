@@ -1,23 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Generator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
+    <header>
+      <h1>CSS Color Generator</h1>
+    </header>
     <div id="main-container">
-        <div id="first-color-container"></div>
-        <div id="second-color-container"></div>
-        <div id="third-color-container"></div>
+      <div id="first-color-name-container" class="color-name-container">
+        <div id="first-color-container" class="color-container"></div>
+        <div id="first-name-container" class="name-container"></div>
+      </div>
+      <div id="second-color-name-container" class="color-name-container">
+        <div id="second-color-container" class="color-container"></div>
+        <div id="second-name-container" class="name-container"></div>
+      </div>
+      <div id="third-color-name-container" class="color-name-container">
+        <div id="third-color-container" class="color-container"></div>
+        <div id="third-name-container" class="name-container">
+          <p>hi</p>
+        </div>
+      </div>
     </div>
-    <div>
-        <button id="color-changing-button">Press</button>
+
+    <div class="center-text-horizontally" id="color-changing-button-container">
+      <button
+        type="button"
+        id="color-changing-button"
+        title="Press the button to change the colors"
+      >
+        Press
+      </button>
+      <p>Press the button to change the colors.</p>
     </div>
-    
   </body>
   <script type="text/javascript" src="js/main.js"></script>
 </html>
-<script

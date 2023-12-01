@@ -1,15 +1,66 @@
-/* removes all basic styling */
-* {
-    margin: 0;
-    padding: 0;
+/* removes all default browser styling */
+*, *::before, *::after {
     box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;	
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+/* set default dark mode */
+html {
+    color-scheme: dark light;
+}
+
+body {
+	min-height: 100vh;
+    min-height: 100svh;
+}
+
+
+/* custom CSS starts */
+body {
+    font-family: monospace;
+}
+
+.center-text-horizontally {
+    text-align: center;
 }
 
 #main-container {
     display: flex;
 }
 
-#main-container div {
-    width: 100%;
+div.color-container {
     height: 400px;
+}
+
+#main-container div.color-name-container {
+    flex-grow: 1;
+
+    transition: flex-grow .5s ease-in-out;
+}
+
+#main-container div.color-name-container:hover{
+    flex-grow: 2;
+}
+
+div.color-container {
+    position: relative;
+}
+
+div.color-container p {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    
+}
+
+#color-changing-button-container {
+    margin-top: 1em;
 }
