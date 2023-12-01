@@ -57,17 +57,17 @@ const thirdColorContainer = document.querySelector("#third-color-container");
 const firstNameContainer = document.querySelector("#first-name-container");
 const secondNameContainer = document.querySelector("#second-name-container");
 const thirdNameContainer = document.querySelector("#third-name-container");
-console.log(thirdNameContainer);
-console.log(thirdNameContainer.childNodes);
-thirdNameContainer.innerHTML = "";
 
 colorChangingButton.addEventListener("click", () => {
   let randomColor = getRGB();
   firstColorContainer.style.backgroundColor = randomColor;
   let hexValue = convertRGBtoHex(randomColor);
   if (firstNameContainer.hasChildNodes()) {
-    firstNameContainer.removeChild(firstNameContainer.firstChild);
+    firstNameContainer.innerHTML = "";
   }
+  // if (firstNameContainer.hasChildNodes()) {
+  //   firstNameContainer.removeChild(firstNameContainer.firstChild);
+  // }
   const p1 = document.createElement("p");
   p1.innerText = hexValue;
   firstNameContainer.append(p1);
